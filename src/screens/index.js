@@ -1,6 +1,8 @@
 import Home from './Home';
 import Question from './Question';
 import Test from './Test';
+import { List, Main, My } from './TabScreens';
+
 import Extra from './Extra';
 import SignUp from './SignUp';
 import Landing from './Landing';
@@ -14,4 +16,4 @@ import Splash from './Splash';
 // import Intro from './Intro';
 
 //export { Home, EnterName, List, Intro };
-export { Home, Question, Test, Extra, SignUp, Landing, Login, SelectType, Splash };
+export { Home, Question, Test, List, Main, My, Extra, SignUp, Landing, Login, SelectType, Splash };
