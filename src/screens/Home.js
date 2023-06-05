@@ -30,6 +30,30 @@ const Home = ({ navigation }) => {
         title="치매 진단"
         onPress={() => navigation.navigate('Test')}
       />
+      <Button
+        title="Extra"
+        onPress={() => navigation.navigate('Extra')}
+      />
+      <Button
+        title="Landing"
+        onPress={() => navigation.navigate('Landing')}
+      />
+      <Button
+        title="Login"
+        onPress={() => navigation.navigate('Login')}
+      />
+      <Button
+        title="SelectType"
+        onPress={() => navigation.navigate('SelectType')}
+      />
+      <Button
+        title="SignUp"
+        onPress={() => navigation.navigate('SignUp')}
+      />
+      <Button
+        title="Splash"
+        onPress={() => navigation.navigate('Splash')}
+      />
     </Container>
   );
 };
