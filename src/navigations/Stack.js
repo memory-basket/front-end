@@ -1,8 +1,16 @@
-import React from 'react';
+import React from "react";
 //import { StatusBar } from 'expo-status-bar';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from "@react-navigation/stack";
 // import { Home, Question, Test, Landing, Login, Extra, SelectType, SignUp, Splash } from '../screens';
-import { Home, Question, Test, Landing, SelectType, SignUp, Splash } from '../screens';
+import {
+  Home,
+  Question,
+  Test,
+  Landing,
+  SelectType,
+  SignUp,
+  Splash,
+} from "../screens";
 
 const Stack = createStackNavigator();
 
@@ -10,7 +18,7 @@ const StackNav = () => {
   return (
     <Stack.Navigator
       initialRouteName="Home"
-      screenOptions={{ cardStyle: { backgroundColor: '#ffffff' } }}
+      screenOptions={{ cardStyle: { backgroundColor: "#ffffff" } }}
     >
       <Stack.Screen
         name="Home"
@@ -28,7 +36,6 @@ const StackNav = () => {
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="Splash" component={Splash} />
       {/* <Stack.Screen name="Extra" component={Extra} /> */}
-
     </Stack.Navigator>
   );
 };
