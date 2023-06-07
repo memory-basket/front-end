@@ -18,7 +18,7 @@ const Button = styled.View`
   height: 20; */
 `;
 
-const TopButton = ({ text, onPressBack, onPressClose }) => {
+const TitleContainer = ({ text, onPressBack, onPressClose }) => {
   return (
     <>
       <Container>
@@ -51,10 +51,10 @@ const TopButton = ({ text, onPressBack, onPressClose }) => {
   );
 };
 
-TopButton.defaultProps = {
+TitleContainer.defaultProps = {
   text: "page-name",
   onPressBack: () => alert("back"),
   onPressClose: () => alert("close"),
 };
 
-export default TopButton;
+export default TitleContainer;
