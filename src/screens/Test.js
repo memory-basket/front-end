@@ -1,14 +1,11 @@
-import React from 'react';
-import { useState } from 'react';
-//import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-//import Button from '../components/Button';
-import styled from 'styled-components/native';
-
+import React from "react";
+import { useState } from "react";
+import { Text, View } from "react-native";
+import styled from "styled-components/native";
+import TopButton from "../components/TopButton";
 
 const Container = styled.View`
   flex: 1;
-  //background-color: #fff;
   align-items: center;
   justify-content: center;
 `;
@@ -18,15 +15,22 @@ const StyledText = styled.Text`
   margin: 20px;
 `;
 
+const Title = styled.Text`
+  align-items: center;
+`;
+
 const Test = ({ navigation }) => {
   return (
-    <Container>
+    <>
+      <Container>
+        <TopButton
+          text="치매 진단 결과"
+          onPressBack={() => navigation.navigate("Home")}
+          onPressClose={() => navigation.navigate("Home")}
+        />
+      </Container>
       <StyledText>치매 진단 페이지입니다!</StyledText>
-      {/* <Button
-        title="오늘의 질문"
-        //onPress={() => navigation.navigate('EnterName')}
-      /> */}
-    </Container>
+    </>
   );
 };
 

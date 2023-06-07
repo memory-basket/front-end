@@ -9,12 +9,16 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "1.17.11",
     "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-seoul/kakao-login": "^5.2.6",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
+    "axios": "^1.4.0",
     "expo": "~48.0.18",
     "expo-app-loading": "^2.1.1",
     "expo-font": "~11.1.1",
+    "expo-screen-orientation": "~5.1.1",
     "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",
     "hermes-engine": "^0.5.2-rc1",
@@ -26,6 +30,7 @@
     "react-native-safe-area-context": "^4.5.0",
     "react-native-screens": "~3.20.0",
     "react-native-web": "~0.18.11",
+    "react-native-webview": "11.26.0",
     "react-navigation": "^4.4.4",
     "styled-components": "^5.3.11"
   },

@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+{/*import { React, useContext } from "react";
 import {
   TouchableOpacity,
   StyleSheet,
@@ -106,4 +106,29 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: "40px",
   },
-});
+});*/}
+
+import { KAKAO_AUTH_URL } from "../components/OAuth";
+import {Text, TouchableOpacity, Linking} from 'react-native';
+import React from 'react';
+import { useNavigation } from "@react-navigation/native";
+import KaKaoLogin from "./KaKaoLogin";
+
+export default function SignUp() {
+  const navigation = useNavigation();
+
+//  const handlePress = ()=>
+  //  {navigation.navigate("KaKaoLogin", {screen:"KaKaoLogin"})
+  //   console.log(KAKAO_AUTH_URL);
+ //};
+
+  return(
+
+<TouchableOpacity
+  onPress={()=>navigation.navigate("KaKaoLogin", {screen:"KaKaoLogin"})}>
+    <Text>카카오 계정 로그인</Text>
+</TouchableOpacity>
+  );
+  }
+
+//  href={}
