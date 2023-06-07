@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 //import Button from './components/Button';
 //import styled from 'styled-components/native';
-import Navigation from './navigations';
+import Navigation from './src/navigations';
 
 // const Container = styled.View`
 //     flex: 1;
