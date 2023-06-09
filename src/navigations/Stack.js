@@ -10,7 +10,11 @@ import {
   SelectType,
   SignUp,
   Splash,
+  TodaysQuestion,
+  WriteTodaysQuestion,
 } from "../screens";
+
+// import { TodaysQuestion } from "../screens/questions";
 
 const Stack = createStackNavigator();
 
@@ -25,16 +29,22 @@ const StackNav = () => {
         component={Home}
         options={{ headerShown: false }}
       />
+
       {/* Questions = 오늘의 질문, Test = 치매 진단, Result = 치매 진단 결과 */}
       <Stack.Screen name="Question" component={Question} />
       <Stack.Screen name="Test" component={Test} />
       {/* <Stack.Screen name="Result" component={Result} /> */}
       {/* 필요하신 페이지들입니다 */}
       <Stack.Screen name="Landing" component={Landing} />
-        {/*<Stack.Screen name="Login" component={Login} />*/}
+      {/*<Stack.Screen name="Login" component={Login} />*/}
       <Stack.Screen name="SelectType" component={SelectType} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="Splash" component={Splash} />
+      <Stack.Screen name="TodaysQuestion" component={TodaysQuestion} />
+      <Stack.Screen
+        name="WriteTodaysQuestion"
+        component={WriteTodaysQuestion}
+      />
       {/* <Stack.Screen name="Extra" component={Extra} /> */}
     </Stack.Navigator>
   );
