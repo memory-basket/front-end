@@ -5,7 +5,6 @@ import TitleContainer from "../../components/TitleContainer";
 import Navigation from "../../navigations/index";
 import { WriteTodaysQuestion } from "./WriteTodaysQuestion";
 import * as Font from "expo-font";
-// import AppLoading from "expo-app-loading";
 import * as SplashScreen from "expo-splash-screen";
 
 const Container = styled.View`
@@ -22,10 +21,12 @@ const QuestionContainer = styled.View`
 `;
 const Question = styled.Text`
   font-size: 20;
+  font-family: "GyeonggiBatangTTF_Regular";
 `;
 
 const Answer = styled.Text`
   color: #5e5e5e;
+  font-family: "GyeonggiBatangTTF_Regular";
 `;
 const MyContainer = styled.View`
   flex: 2;
@@ -39,11 +40,6 @@ const YourContainer = styled.View`
 
 const TodaysQuestion = ({ navigation, text }) => {
   const [isReady, setIsReady] = useState(false);
-  // const [text, setText] = useState("");
-
-  // const onChangeText = (text) => {
-  //   setText(text);
-  // };
   useEffect(() => {
     async function prepare() {
       try {
@@ -99,7 +95,7 @@ const TodaysQuestion = ({ navigation, text }) => {
         <Answer>#1번째 질문 06.02.2023</Answer>
       </QuestionContainer>
       <MyContainer>
-        <Text>홍숙자</Text>
+        <Text style={styles.titleText}>홍숙자</Text>
         <TouchableOpacity
           onPress={() => navigation.navigate("WriteTodaysQuestion")}
         >
@@ -107,7 +103,7 @@ const TodaysQuestion = ({ navigation, text }) => {
         </TouchableOpacity>
       </MyContainer>
       <YourContainer>
-        <Text>홍길동</Text>
+        <Text style={styles.titleText}>홍길동</Text>
         <Answer>상대방은 아직 답변을 하지 않았어요.</Answer>
         <Text>{text}</Text>
       </YourContainer>

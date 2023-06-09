@@ -114,7 +114,7 @@ const Question = ({ navigation }) => {
               marginTop: 0,
               marginLeft: 5,
               marginRight: 5,
-              marginBotton: 15,
+              marginBottom: 15,
               width: 180,
               height: "100%",
               resizeMode: "contain",
