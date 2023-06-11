@@ -12,6 +12,8 @@ import {
   Splash,
   TodaysQuestion,
   WriteTodaysQuestion,
+  OnboardingPage1,
+  MyPage,
 } from "../screens";
 
 // import { TodaysQuestion } from "../screens/questions";
@@ -29,7 +31,6 @@ const StackNav = () => {
         component={Home}
         options={{ headerShown: false }}
       />
-
       {/* Questions = 오늘의 질문, Test = 치매 진단, Result = 치매 진단 결과 */}
       <Stack.Screen name="Question" component={Question} />
       <Stack.Screen name="Test" component={Test} />
@@ -45,6 +46,8 @@ const StackNav = () => {
         name="WriteTodaysQuestion"
         component={WriteTodaysQuestion}
       />
+      <Stack.Screen name="OnboardingPage1" component={OnboardingPage1} />
+      <Stack.Screen name="MyPage" component={MyPage} />
       {/* <Stack.Screen name="Extra" component={Extra} /> */}
     </Stack.Navigator>
   );

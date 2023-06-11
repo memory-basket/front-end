@@ -95,7 +95,16 @@ const Question = ({ navigation }) => {
               resizeMode: "contain",
               alignSelf: "center",
             }}
-            source={require("../../assets/img/home/flower1_1.png")}
+            //새싹이미지
+            //source={require("../../assets/img/home/flower1_1.png")}
+            //꽃 2번째이미지
+            //source={require("../../assets/img/home/flower1_2.png")}
+            //꽃 3번째이미지
+            //source={require("../../assets/img/home/flower1_3.png")}
+            //꽃 4번째이미지
+            //source={require("../../assets/img/home/flower1_4.png")}
+            //꽃 5번째 이미지
+            source={require("../../assets/img/home/flower1_5.png")}
           />
         </Background>
       </MainBody>

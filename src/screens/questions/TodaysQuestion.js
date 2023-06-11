@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 import TitleContainer from "../../components/TitleContainer";
-import Navigation from "../../navigations/index";
 import { WriteTodaysQuestion } from "./WriteTodaysQuestion";
 import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
