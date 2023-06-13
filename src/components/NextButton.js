@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components";
 
 const ButtonStyle = styled.TouchableOpacity`
   width: 100%;
-  background-color: ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme.background};
   align-items: center;
   justify-content: flex-end;
   margin: 0 20px;
@@ -18,7 +18,7 @@ const ButtonStyle = styled.TouchableOpacity`
 const Title = styled.Text`
   font-size: 35px;
 `;
-const AuthButton = ({ title, onPress }) => {
+const NextButton = ({ title, onPress }) => {
   return (
     <ThemeProvider theme={theme}>
       <ButtonStyle onPress={onPress}>
@@ -28,4 +28,4 @@ const AuthButton = ({ title, onPress }) => {
   );
 };
 
-export default AuthButton;
+export default NextButton;
