@@ -1,15 +1,15 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { List, Main, My } from '../screens';
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { QuestionList, Home, MyPage } from "../screens";
 
 const Tab = createBottomTabNavigator();
 
 const TabNav = () => {
   return (
-    <Tab.Navigator initialRouteName="Main">
-        <Tab.Screen name="List" component={List}/>
-        <Tab.Screen name="Main" component={Main}/>
-        <Tab.Screen name="My" component={My}/>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="List" component={QuestionList} />
+      <Tab.Screen name="My" component={MyPage} />
     </Tab.Navigator>
   );
 };

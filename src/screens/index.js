@@ -5,9 +5,9 @@ import { List, Main, My } from "./TabScreens";
 import Extra from "./Extra";
 import SignUp from "./SignUp";
 import Landing from "./Landing";
+import QuestionList from "./QuestionList";
 import Login from "./Login";
 import SelectType from "./SelectType";
-import Splash from "./Splash";
 import TodaysQuestion from "./questions/TodaysQuestion";
 import WriteTodaysQuestion from "./questions/WriteTodaysQuestion";
 import OnboardingPage1 from "./onboarding/OnboardingPage1";
@@ -19,7 +19,6 @@ import OnboardingPage6 from "./onboarding/OnboardingPage6";
 import OnboardingPage7 from "./onboarding/OnboardingPage7";
 import OnboardingPage8 from "./onboarding/OnboardingPage8";
 import MyPage from "./mypage/MyPage";
-
 export {
   List,
   Main,
@@ -32,7 +31,6 @@ export {
   Landing,
   Login,
   SelectType,
-  Splash,
   TodaysQuestion,
   WriteTodaysQuestion,
   OnboardingPage1,
@@ -44,4 +42,5 @@ export {
   OnboardingPage7,
   OnboardingPage8,
   MyPage,
+  QuestionList,
 };
