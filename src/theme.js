@@ -3,5 +3,5 @@ export const theme = {
   itemBackground: "#333333",
   white: "#ffffff",
   text: "#eeeeee",
-  done: "#666666",
+  buttonBorder: "#3C85FF",
 };
