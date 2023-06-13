@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
-import AuthButton from "../components/AuthButton";
-
-import { KAKAO_AUTH_URL } from "../components/OAuth";
+import AuthButton from "../../components/AuthButton";
 import { Image, TouchableOpacity, ImageBackground } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import KaKaoLogin from "./KaKaoLogin";
 
 const Container = styled.View`
   flex: 1;
@@ -25,10 +21,10 @@ const StyledBtn = styled.Image`
   margin-bottom: 10px;
 `;
 
-const SignUp = ({ navigation }) => {
+const OnboardingPage1 = ({ navigation }) => {
   return (
     <ImageBackground
-      source={require("../../assets/img/auth/signup_bg_img.png")}
+      source={require("../../../assets/img/auth/onboarding1_1.png")}
       style={{
         flex: 1,
         width: "100%",
@@ -36,12 +32,6 @@ const SignUp = ({ navigation }) => {
       }}
     >
       <Container>
-        <TouchableOpacity>
-          <StyledBtn
-            source={require("../../assets/img/auth/kakao_login_btn.png")}
-          />
-        </TouchableOpacity>
-
         <AuthButton
           // style={{ flex: 1 }}
           title="전화번호로 시작하기"
@@ -52,4 +42,4 @@ const SignUp = ({ navigation }) => {
   );
 };
 
-export default SignUp;
+export default OnboardingPage1;

@@ -2,7 +2,6 @@ import React, { useState, onChangeText } from "react";
 import { Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 import TitleContainer from "../../components/TitleContainer";
-import Navigation from "../../navigations/index";
 
 const Container = styled.View`
   flex: 1;

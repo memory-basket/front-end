@@ -10,11 +10,8 @@ import SelectType from "./SelectType";
 import Splash from "./Splash";
 import TodaysQuestion from "./questions/TodaysQuestion";
 import WriteTodaysQuestion from "./questions/WriteTodaysQuestion";
-
-//import List from './Result';
-// import Intro from './Intro';
-
-//export { Home, EnterName, List, Intro };
+import OnboardingPage1 from "./onboarding/OnboardingPage1";
+import MyPage from "./mypage/MyPage";
 
 export {
   List,
@@ -31,4 +28,6 @@ export {
   Splash,
   TodaysQuestion,
   WriteTodaysQuestion,
+  OnboardingPage1,
+  MyPage,
 };

@@ -1,59 +1,54 @@
-import { React, useContext } from "react";
-import {
-  TouchableOpacity,
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  Image,
-} from "react-native";
+//유형선택 페이지 버튼 간격 줄여야 함
 
-export default function App() {
+import React from "react";
+import styled from "styled-components/native";
+import { Image, ImageBackground } from "react-native";
+
+const Container = styled.View`
+  // height: 500px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 370px 0px 0px 0px;
+`;
+
+const StyledBtn = styled(Image)`
+  width: 380px;
+  height: 220px;
+  margin: 0;
+  padding: 0;
+`;
+
+const ButtonContainer = styled.TouchableOpacity`
+  margin: 0;
+`;
+
+const SelectType = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <View>
-        <View>
-          <Text>종이꽃,</Text>
-          <Text>: 항상 기억할게요</Text>
-        </View>
+    <ImageBackground
+      source={require("../../assets/img/auth/select_type_bg_img.png")}
+      style={{
+        flex: 1,
+        width: "100%",
+        margin: 0,
+      }}
+    >
+      <Container>
+        <ButtonContainer onPress={() => navigation.navigate("OnboardingPage1")}>
+          <StyledBtn
+            source={require("../../assets/img/auth/type1_btn.png")}
+            style={{
+              padding: 0,
+              margin: 0,
+            }}
+          />
+        </ButtonContainer>
 
-        <View>
-          <Text>종이꽃과 함께할</Text>
-          <Text>사용자의 유형을 선택해 주세요.</Text>
-        </View>
-      </View>
-
-      <TouchableOpacity
-      // onPress={() => goToSignUp(appKeys.consumer)}
-      // style={styles.typeBtn}
-      >
-        <Image
-          //   style={{
-          //     width: 132,
-          //     height: 132,
-          //     borderRadius: 100,
-          //     overflow: 'hidden',
-          //     borderWidth: 3,
-          //     borderColor: 'blue',}}
-          source={require("../../assets/img/flower2_img.png")}
-        />
-        <Text>보호자</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <Image source={require("../../assets/img/flower1_img.png")} />
-        <Text>보호자</Text>
-      </TouchableOpacity>
-    </View>
+        <ButtonContainer>
+          <StyledBtn source={require("../../assets/img/auth/type2_btn.png")} />
+        </ButtonContainer>
+      </Container>
+    </ImageBackground>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    marginTop: "30%",
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {},
-});
+export default SelectType;
