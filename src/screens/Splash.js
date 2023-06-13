@@ -9,7 +9,7 @@ const Textbox = styled.View`
   justify-content: center;
   background-color: "red";
 `;
-export default function Splash() {
+export default function QuestionList() {
   const [isReady, setIsReady] = useState(false);
   useEffect(() => {
     async function prepare() {

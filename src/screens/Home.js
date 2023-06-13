@@ -25,12 +25,7 @@ const Home = ({ navigation }) => {
       <Button title="MyPage" onPress={() => navigation.navigate("MyPage")} />
       <Button title="Landing" onPress={() => navigation.navigate("Landing")} />
       <Button title="Login" onPress={() => navigation.navigate("Login")} />
-      <Button
-        title="SelectType"
-        onPress={() => navigation.navigate("SelectType")}
-      />
       <Button title="SignUp" onPress={() => navigation.navigate("SignUp")} />
-      <Button title="Splash" onPress={() => navigation.navigate("Splash")} />
     </Container>
   );
 };
