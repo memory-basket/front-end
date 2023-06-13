@@ -38,8 +38,16 @@ const StackNav = () => {
       {/* 필요하신 페이지들입니다 */}
       <Stack.Screen name="Landing" component={Landing} />
       {/*<Stack.Screen name="Login" component={Login} />*/}
-      <Stack.Screen name="SelectType" component={SelectType} />
-      <Stack.Screen name="SignUp" component={SignUp} />
+      <Stack.Screen
+        name="SelectType"
+        component={SelectType}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUp}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="Splash" component={Splash} />
       <Stack.Screen name="TodaysQuestion" component={TodaysQuestion} />
       <Stack.Screen

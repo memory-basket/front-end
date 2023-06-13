@@ -1,19 +1,45 @@
-import React, { useEffect, usestate } from "react";
-import { Text, View, TouchableOpacity, Image } from "react-native";
+import React from "react";
+import styled from "styled-components/native";
+import AuthButton from "../../components/AuthButton";
+import { Image, TouchableOpacity, ImageBackground } from "react-native";
 
-export default function OnboardingPage1() {
-  useEffect(() => {
-    setPageNum(0);
-  }, []);
+const Container = styled.View`
+  flex: 1;
+  //justify-content: center;
+  align-items: center;
+  padding: 630px 20px 0 20px;
+`;
 
-  const [pageNum, setPageNum] = useState(0);
+const StyledText = styled.Text`
+  font-size: 30px;
+  color: #111111;
+`;
+
+const StyledBtn = styled.Image`
+  width: 370px;
+  height: 60px;
+  margin-bottom: 10px;
+`;
+
+const OnboardingPage1 = ({ navigation }) => {
   return (
-    <>
-      <Text>안녕하세요.</Text>
-      <Text>종이꽃에 오신 걸 환영합니다.</Text>
-      <Text>일상의 작은 변화를 지금 만나보세요</Text>
-
-      <Image source={(require = "../../assets/img/flower2_img.png")} />
-    </>
+    <ImageBackground
+      source={require("../../../assets/img/auth/onboarding1_1.png")}
+      style={{
+        flex: 1,
+        width: "100%",
+        margin: 0,
+      }}
+    >
+      <Container>
+        <AuthButton
+          // style={{ flex: 1 }}
+          title="전화번호로 시작하기"
+          onPress={() => navigation.navigate("SelectType")}
+        />
+      </Container>
+    </ImageBackground>
   );
-}
+};
+
+export default OnboardingPage1;

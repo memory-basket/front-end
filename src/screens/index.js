@@ -13,11 +13,6 @@ import WriteTodaysQuestion from "./questions/WriteTodaysQuestion";
 import OnboardingPage1 from "./onboarding/OnboardingPage1";
 import MyPage from "./mypage/MyPage";
 
-//import List from './Result';
-// import Intro from './Intro';
-
-//export { Home, EnterName, List, Intro };
-
 export {
   List,
   Main,
