@@ -9,10 +9,10 @@ const Container = styled.View`
   padding: 725px 20px 0 20px;
 `;
 
-const OnboardingPage1 = ({ navigation }) => {
+const OnboardingPage4 = ({ navigation }) => {
   return (
     <ImageBackground
-      source={require("../../../assets/img/auth/onboarding1_1.png")}
+      source={require("../../../assets/img/auth/onboarding1_4.png")}
       style={{
         flex: 1,
         width: "100%",
@@ -21,12 +21,12 @@ const OnboardingPage1 = ({ navigation }) => {
     >
       <Container>
         <NextButton
-          title="다음으로"
-          onPress={() => navigation.navigate("OnboardingPage2")}
+          title="시작하기"
+          onPress={() => navigation.navigate("Home")}
         />
       </Container>
     </ImageBackground>
   );
 };
 
-export default OnboardingPage1;
+export default OnboardingPage4;

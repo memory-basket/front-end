@@ -63,12 +63,7 @@ const TodaysQuestion = ({ navigation, text }) => {
   }, [isReady]);
   if (!isReady) {
     return null;
-
-    // return Font.loadAsync({
-    //   GyeonggiBatangTTF_Regular: require("../../../assets/fonts/GyeonggiBatangTTF_Regular.ttf"),
-    // });
   }
-
   return (
     <Container>
       <TitleContainer

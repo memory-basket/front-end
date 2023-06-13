@@ -43,7 +43,7 @@ const SelectType = ({ navigation }) => {
           />
         </ButtonContainer>
 
-        <ButtonContainer>
+        <ButtonContainer onPress={() => navigation.navigate("OnboardingPage5")}>
           <StyledBtn source={require("../../assets/img/auth/type2_btn.png")} />
         </ButtonContainer>
       </Container>
