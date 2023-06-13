@@ -19,6 +19,7 @@ import {
   OnboardingPage8,
   MyPage,
   QuestionList,
+  AddPage,
 } from "../screens";
 import TabNav from "./Tab";
 const Stack = createStackNavigator();
@@ -103,6 +104,7 @@ const StackNav = () => {
       />
       <Stack.Screen name="MyPage" component={MyPage} />
       <Stack.Screen name="QuestionList" component={QuestionList} />
+      <Stack.Screen name="AddPage" component={AddPage} />
     </Stack.Navigator>
   );
 };

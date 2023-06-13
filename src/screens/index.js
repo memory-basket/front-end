@@ -19,6 +19,7 @@ import OnboardingPage6 from "./onboarding/OnboardingPage6";
 import OnboardingPage7 from "./onboarding/OnboardingPage7";
 import OnboardingPage8 from "./onboarding/OnboardingPage8";
 import MyPage from "./mypage/MyPage";
+import AddPage from "./mypage/AddPage";
 export {
   List,
   Main,
@@ -43,4 +44,5 @@ export {
   OnboardingPage8,
   MyPage,
   QuestionList,
+  AddPage,
 };
