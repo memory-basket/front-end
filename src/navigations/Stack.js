@@ -1,5 +1,5 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 import {
   Home,
   Question,
@@ -20,32 +20,49 @@ import {
   MyPage,
   QuestionList,
   AddPage,
-} from "../screens";
-import TabNav from "./Tab";
+} from '../screens';
+import TabNav from './Tab';
 const Stack = createStackNavigator();
 
 const StackNav = () => {
   return (
     <Stack.Navigator
       initialRouteName="TabNav"
-      screenOptions={{ cardStyle: { backgroundColor: "#ffffff" } }}
+      screenOptions={{ cardStyle: { backgroundColor: '#ffffff' } }}
+      options={{ headerShown: false }}
     >
       {/* <Stack.Navigator
       initialRouteName="Home"
       screenOptions={{ cardStyle: { backgroundColor: "#ffffff" } }}
     > */}
-      <Stack.Screen name="TabNav" component={TabNav} />
+      <Stack.Screen
+        name="TabNav"
+        component={TabNav}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="Home"
         component={Home}
         options={{ headerShown: false }}
       />
       {/* Questions = 오늘의 질문, Test = 치매 진단, Result = 치매 진단 결과 */}
-      <Stack.Screen name="Question" component={Question} />
-      <Stack.Screen name="Test" component={Test} />
+      <Stack.Screen
+        name="Question"
+        component={Question}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Test"
+        component={Test}
+        options={{ headerShown: false }}
+      />
       {/* <Stack.Screen name="Result" component={Result} /> */}
       {/* 필요하신 페이지들입니다 */}
-      <Stack.Screen name="Landing" component={Landing} />
+      <Stack.Screen
+        name="Landing"
+        component={Landing}
+        options={{ headerShown: false }}
+      />
       {/*<Stack.Screen name="Login" component={Login} />*/}
       <Stack.Screen
         name="SelectType"
@@ -61,6 +78,7 @@ const StackNav = () => {
       <Stack.Screen
         name="WriteTodaysQuestion"
         component={WriteTodaysQuestion}
+        
       />
       <Stack.Screen
         name="OnboardingPage1"
