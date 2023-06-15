@@ -1,5 +1,5 @@
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
 import {
   Home,
   Question,
@@ -7,6 +7,7 @@ import {
   Landing,
   SelectType,
   SignUp,
+  Login,
   TodaysQuestion,
   WriteTodaysQuestion,
   OnboardingPage1,
@@ -20,15 +21,15 @@ import {
   MyPage,
   QuestionList,
   AddPage,
-} from '../screens';
-import TabNav from './Tab';
+} from "../screens";
+import TabNav from "./Tab";
 const Stack = createStackNavigator();
 
 const StackNav = () => {
   return (
     <Stack.Navigator
       initialRouteName="TabNav"
-      screenOptions={{ cardStyle: { backgroundColor: '#ffffff' } }}
+      screenOptions={{ cardStyle: { backgroundColor: "#ffffff" } }}
       options={{ headerShown: false }}
     >
       {/* <Stack.Navigator
@@ -63,7 +64,7 @@ const StackNav = () => {
         component={Landing}
         options={{ headerShown: false }}
       />
-      {/*<Stack.Screen name="Login" component={Login} />*/}
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen
         name="SelectType"
         component={SelectType}
@@ -78,7 +79,6 @@ const StackNav = () => {
       <Stack.Screen
         name="WriteTodaysQuestion"
         component={WriteTodaysQuestion}
-        
       />
       <Stack.Screen
         name="OnboardingPage1"

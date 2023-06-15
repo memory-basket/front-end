@@ -22,7 +22,7 @@ const OnboardingPage8 = ({ navigation }) => {
       <Container>
         <NextButton
           title="시작하기"
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Question")}
         />
       </Container>
     </ImageBackground>

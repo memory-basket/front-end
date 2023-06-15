@@ -1,16 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-//import { StatusBar } from 'expo-status-bar';
-import {
-  StyleSheet,
-  Style,
-  Text,
-  View,
-  Image,
-  Button,
-  ImageBackground,
-  TouchableOpacity,
-} from "react-native";
+import { View, Image, TouchableOpacity } from "react-native";
 
 import styled from "styled-components/native";
 
@@ -19,12 +9,8 @@ const Container = styled.View`
   align-items: center;
 `;
 const MainBody = styled.View`
-  /* margin: 0; */
   flex: 3;
   width: 100%;
-  /* height: 200px; */
-  /* align-items: center; */
-  /* justify-content: center; */
 `;
 
 const Background = styled.ImageBackground`
