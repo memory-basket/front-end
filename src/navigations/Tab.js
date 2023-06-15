@@ -1,7 +1,7 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { QuestionList, Home, MyPage } from '../screens';
-import { Image, TouchableOpacity, ImageBackground } from 'react-native';
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { QuestionList, Home, MyPage } from "../screens";
+import { Image, TouchableOpacity, ImageBackground } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -19,11 +19,11 @@ const TabNav = () => {
         options={{
           tabBarIcon: (focused) => (
             <Image
-              style={{ resizeMode: 'contain', width: 25, height: 25 }}
-              source={require('../../assets/img/navigation/list.png')}
+              style={{ resizeMode: "contain", width: 25, height: 25 }}
+              source={require("../../assets/img/navigation/list.png")}
             />
           ),
-          tabBarActiveTintColor: '#FFB800',
+          tabBarActiveTintColor: "#FFB800",
         }}
       />
       <Tab.Screen
@@ -33,16 +33,16 @@ const TabNav = () => {
           tabBarIcon: (focused) =>
             focused ? (
               <Image
-                style={{ resizeMode: 'contain', width: 25, height: 25 }}
-                source={require('../../assets/img/navigation/home.png')}
+                style={{ resizeMode: "contain", width: 25, height: 25 }}
+                source={require("../../assets/img/navigation/home_icon_selected.png")}
               />
             ) : (
               <Image
-                style={{ resizeMode: 'contain', width: 25, height: 25 }}
-                source={require('../../assets/img/navigation/home_icon_selected.png')}
+                style={{ resizeMode: "contain", width: 25, height: 25 }}
+                source={require("../../assets/img/navigation/home.png")}
               />
             ),
-          tabBarActiveTintColor: '#3C85FF',
+          tabBarActiveTintColor: "#3C85FF",
         }}
       />
       <Tab.Screen
@@ -52,11 +52,11 @@ const TabNav = () => {
           tabBarIcon: (focused) => (
             <Image
               // style={{ width: 25, height: 25 }}
-              style={{ resizeMode: 'contain', width: 25, height: 25 }}
-              source={require('../../assets/img/navigation/my_icon.png')}
+              style={{ resizeMode: "contain", width: 25, height: 25 }}
+              source={require("../../assets/img/navigation/my_icon.png")}
             />
           ),
-          tabBarActiveTintColor: '#FF5370',
+          tabBarActiveTintColor: "#FF5370",
         }}
       />
     </Tab.Navigator>
