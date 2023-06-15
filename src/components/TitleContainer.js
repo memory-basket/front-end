@@ -6,6 +6,7 @@ const Container = styled.View`
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
+  
 `;
 
 const Title = styled.Text`
@@ -21,6 +22,7 @@ const Button = styled.View`
 const TitleContainer = ({ text, onPressBack, onPressClose }) => {
   return (
     <>
+      <Container style={{ marginTop: 40 }}/>
       <Container>
         <Button>
           <TouchableOpacity
