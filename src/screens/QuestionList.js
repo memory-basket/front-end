@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import TitleContainer from '../components/TitleContainer';
-import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+} from 'react-native';
 import Button from '../components/Button';
 
 const Container = styled.View`
@@ -46,31 +53,32 @@ const QuestionList = ({ navigation }) => {
       <TitleContainer
         //give margintop 20 to the title
         // style={{ marginTop: 50 }}
-        
+
         text="질문 리스트"
-        onPressBack={() => navigation.navigate('Home')}
-        onPressClose={() => navigation.navigate('Home')}
+        onPressBack={() => navigation.navigate('홈')}
+        onPressClose={() => navigation.navigate('홈')}
       />
-      
-    <View style={styles.container}>
-      <ImageBackground
-        source={require('../../assets/img/question/question_list_bg.png')}
-        style={{
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-        }}
-      ></ImageBackground>
-      {/* give margin 100 */}
-      <Text style={{ marginTop: 100, fontSize: 20, color: '#ffffff' }}/>
-      <Button style={styles.button} title="오늘의 질문" onPress={() => navigation.navigate('Question')}/>
-      {/* make a transparent button */}
-      
-    </View>
+
+      <View style={styles.container}>
+        <ImageBackground
+          source={require('../../assets/img/question/question_list_bg.png')}
+          style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+          }}
+        ></ImageBackground>
+        {/* give margin 100 */}
+        <Text style={{ marginTop: 100, fontSize: 20, color: '#ffffff' }} />
+        <Button
+          style={styles.button}
+          title="오늘의 질문"
+          onPress={() => navigation.navigate('Question')}
+        />
+        {/* make a transparent button */}
+      </View>
     </>
   );
 };
 
 export default QuestionList;
-
-

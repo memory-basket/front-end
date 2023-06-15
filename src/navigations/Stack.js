@@ -20,6 +20,7 @@ import {
   MyPage,
   QuestionList,
   AddPage,
+  Garden,
 } from '../screens';
 import TabNav from './Tab';
 const Stack = createStackNavigator();
@@ -74,11 +75,11 @@ const StackNav = () => {
         component={SignUp}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="TodaysQuestion" component={TodaysQuestion} />
+      {/* 적용하기 다른 페이지도 */}
+      <Stack.Screen name="TodaysQuestion" component={TodaysQuestion} options={{ headerStyle: { backgroundColor: '#fff2D0' } }}/>
       <Stack.Screen
         name="WriteTodaysQuestion"
         component={WriteTodaysQuestion}
-        
       />
       <Stack.Screen
         name="OnboardingPage1"
@@ -121,8 +122,13 @@ const StackNav = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen name="MyPage" component={MyPage} />
-      <Stack.Screen name="QuestionList" component={QuestionList} />
+      <Stack.Screen
+        name="QuestionList"
+        component={QuestionList}
+        options={{ headerStyle: { backgroundColor: '#fff2D0' } }}
+      />
       <Stack.Screen name="AddPage" component={AddPage} />
+      <Stack.Screen name="Garden" component={Garden} />
     </Stack.Navigator>
   );
 };

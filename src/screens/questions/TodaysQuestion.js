@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
-import styled from "styled-components/native";
-import TitleContainer from "../../components/TitleContainer";
-import { WriteTodaysQuestion } from "./WriteTodaysQuestion";
-import * as Font from "expo-font";
-import * as SplashScreen from "expo-splash-screen";
+import React, { useState, useEffect, useCallback } from 'react';
+import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
+import TitleContainer from '../../components/TitleContainer';
+import { WriteTodaysQuestion } from './WriteTodaysQuestion';
+import * as Font from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 
 const Container = styled.View`
   flex: 1;
@@ -20,12 +20,14 @@ const QuestionContainer = styled.View`
 `;
 const Question = styled.Text`
   font-size: 20;
-  font-family: "GyeonggiBatangTTF_Regular";
+  //font-family: "GyeonggiBatangTTF_Regular";
+  font-family: 'my-custom-font';
 `;
 
 const Answer = styled.Text`
   color: #5e5e5e;
-  font-family: "GyeonggiBatangTTF_Regular";
+  //font-family: "GyeonggiBatangTTF_Regular";
+  font-family: 'my-custom-font';
 `;
 const MyContainer = styled.View`
   flex: 2;
@@ -38,48 +40,29 @@ const YourContainer = styled.View`
 `;
 
 const TodaysQuestion = ({ navigation, text }) => {
-  const [isReady, setIsReady] = useState(false);
-  useEffect(() => {
-    async function prepare() {
-      try {
-        await SplashScreen.preventAutoHideAsync();
-        await Font.loadAsync({
-          GyeonggiBatangTTF_Regular: require("../../../assets/fonts/GyeonggiBatangTTF_Regular.ttf"),
-        });
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-      } catch (e) {
-        console.warn(e);
-      } finally {
-        setIsReady(true);
-      }
-    }
-    prepare();
-  }, []);
+  
+  // const [fontsLoaded] = Font.loadAsync({
+  //   'my-custom-font': require('./assets/fonts/GyeonggiBatangTTF_Regular.ttf'),
+  //   // 'my-second-font' : require('../assets/fonts/SUIT-Regular.ttf'),
+  // });
 
-  const getFonts = useCallback(async () => {
-    if (isReady) {
-      await SplashScreen.hideAsync();
-    }
-  }, [isReady]);
-  if (!isReady) {
-    return null;
-  }
+  // const onLayoutRootView = useCallback(async () => {}, [fontsLoaded]);
   return (
     <Container>
       <TitleContainer
-        style={{ backgroundColor: "blue" }}
+        style={{ backgroundColor: 'blue' }}
         text="오늘의 질문"
-        onPressBack={() => navigation.navigate("Question")}
-        onPressClose={() => navigation.navigate("Question")}
+        onPressBack={() => navigation.navigate('Question')}
+        onPressClose={() => navigation.navigate('Question')}
       />
       <Image
         style={{
-          marginTop: "10%",
-          marginBottom: "10%",
-          height: "20%",
-          resizeMode: "contain",
+          marginTop: '10%',
+          marginBottom: '10%',
+          height: '20%',
+          resizeMode: 'contain',
         }}
-        source={require("../../../assets/img/question/question_flower_img.png")}
+        source={require('../../../assets/img/question/question_flower_img.png')}
       />
 
       <QuestionContainer>
@@ -91,7 +74,7 @@ const TodaysQuestion = ({ navigation, text }) => {
       <MyContainer>
         <Text style={styles.titleText}>홍숙자</Text>
         <TouchableOpacity
-          onPress={() => navigation.navigate("WriteTodaysQuestion")}
+          onPress={() => navigation.navigate('WriteTodaysQuestion')}
         >
           <Answer>눌러서 답변을 입력해주세요.</Answer>
         </TouchableOpacity>
@@ -107,7 +90,7 @@ const TodaysQuestion = ({ navigation, text }) => {
 
 const styles = StyleSheet.create({
   titleText: {
-    fontFamily: "GyeonggiBatangTTF_Regular",
+    fontFamily: 'GyeonggiBatangTTF_Regular',
   },
 });
 
