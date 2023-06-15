@@ -1,7 +1,11 @@
-import React from "react";
+import * as React from "react";
+
+import { StyleSheet, Text } from "react-native";
 import Button from "../components/Button";
 import styled from "styled-components/native";
-
+import * as WebBrowser from "expo-web-browser";
+import * as Linking from "expo-linking";
+import { WebView } from "react-native-webview";
 const Container = styled.View`
   flex: 1;
   align-items: center;
@@ -26,8 +30,21 @@ const Home = ({ navigation }) => {
       <Button title="Landing" onPress={() => navigation.navigate("Landing")} />
       <Button title="Login" onPress={() => navigation.navigate("Login")} />
       <Button title="SignUp" onPress={() => navigation.navigate("SignUp")} />
+      <Text
+        style={styles.textstyle}
+        onPress={() => {
+          WebBrowser.openBrowserAsync("https://www.naver.com");
+        }}
+      >
+        hihi
+      </Text>
     </Container>
   );
 };
 
+const styles = StyleSheet.create({
+  webview: {
+    flex: 1,
+  },
+});
 export default Home;

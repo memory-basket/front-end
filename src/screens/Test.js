@@ -1,59 +1,68 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import { View, Image, TouchableOpacity, ImageBackground } from "react-native";
+
 import styled from "styled-components/native";
-import TitleContainer from "../components/TitleContainer";
 
 const Container = styled.View`
-  /* flex: 1; */
-  /* align-items: center;*/
-  justify-content: center;
+  height: 100%;
+  align-items: center;
+`;
+const MainBody = styled.View`
+  flex: 3;
+  width: 100%;
 `;
 
-const StyledText = styled.Text`
-  font-size: 20px;
-  margin: 20px;
-`;
-
-const Title = styled.Text`
-  justify-content: center;
-  /* flex: 1; */
+const Background = styled.ImageBackground`
+  flex: 1;
 `;
 
 const Test = ({ navigation }) => {
   return (
-    <>
-      <TitleContainer
-        text="치매 진단 결과"
-        onPressBack={() => navigation.navigate("Home")}
-        onPressClose={() => navigation.navigate("Home")}
-      />
-      <Container></Container>
-      <StyledText>
-        <Title>
-          <>
-            <Text>홍길동님 검사 결과</Text>
-          </>
-        </Title>
+    <Container>
+      <MainBody>
+        <Background
+          source={require("../../assets/img/test/test_result_img.png")}
+        ></Background>
+      </MainBody>
 
-        <Text>
-          아직 진단을 하지 않았어요!
-          <Text>
-            <Text style={{ color: "blue" }}>치매 진단 검사</Text>를
-            시행해주세요!
-          </Text>
-        </Text>
-      </StyledText>
-
-      <TouchableOpacity
-        style={{ color: "blue" }}
-        onPress={() => alert("hi")}
-        pressRetentionOffset={{ bottom: 10, top: 10, left: 10, right: 10 }}
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+        }}
       >
-        <Text>치매진단 시작하기</Text>
-        <Image alt="치매 진단 시작하기" />
-      </TouchableOpacity>
-    </>
+        <TouchableOpacity onPress={() => alert("치매안심센터: 1666-0921")}>
+          <Image
+            style={{
+              marginTop: 0,
+              marginLeft: 5,
+              marginRight: 5,
+              //marginBottom: 15,
+              width: 180,
+              height: "100%",
+              resizeMode: "contain",
+            }}
+            source={require("../../assets/img/test/call_center_btn.png")}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => alert("알림을 보냈습니다!")}>
+          <Image
+            style={{
+              marginTop: 0,
+              marginLeft: 5,
+              marginRight: 5,
+              marginBotton: 15,
+              width: 180,
+              height: "100%",
+              resizeMode: "contain",
+            }}
+            source={require("../../assets/img/test/alarm_btn.png")}
+          />
+        </TouchableOpacity>
+      </View>
+    </Container>
   );
 };
 
