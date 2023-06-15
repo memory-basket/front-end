@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect } from "react";
+import { useState } from "react";
 //import { StatusBar } from 'expo-status-bar';
+import { useNavigation, useNavigationState, useRoute } from '@react-navigation/native';
 import {
   StyleSheet,
   Style,
@@ -10,9 +11,9 @@ import {
   Button,
   ImageBackground,
   TouchableOpacity,
-} from 'react-native';
+} from "react-native";
 
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 const Container = styled.View`
   height: 100%;
@@ -67,55 +68,45 @@ const Background = styled.ImageBackground`
 var level = 1;
 
 const Question = () => {
+
   const navigation = useNavigation();
-
-  const route = useRoute();
-  const { flower, isAnswer } = route.params ? route.params : '';
-
+  
+  const route = useRoute();  
+  const {flower, isAnswer}  = route.params ? route.params : "";
+  
   useEffect(() => {
-    if (isAnswer) {
+    console.log(isAnswer)
+    if(isAnswer){
       level++;
     }
-    console.log('level', level);
 
     switch (level) {
-      case 1:
-        setFlowerImg(require('../../assets/img/home/flower1_1.png'));
-        break;
-      case 2:
-        setFlowerImg(require('../../assets/img/home/flower1_2.png'));
-        break;
-      case 3:
-        setFlowerImg(require('../../assets/img/home/flower1_3.png'));
-        break;
-      case 4:
-        setFlowerImg(require('../../assets/img/home/flower1_4.png'));
-        break;
-      case 5:
-        setFlowerImg(require('../../assets/img/home/flower1_5.png'));
-        break;
+      case 1: setFlowerImg(require("../../assets/img/home/flower1_1.png")); break;
+      case 2: setFlowerImg(require("../../assets/img/home/flower1_2.png")); break;
+      case 3: setFlowerImg(require("../../assets/img/home/flower1_3.png")); break;
+      case 4: setFlowerImg(require("../../assets/img/home/flower1_4.png")); break;
+      case 5: setFlowerImg(require("../../assets/img/home/flower1_5.png")); break;
     }
   }, [flower]);
 
-  const [flowerImg, setFlowerImg] = useState(
-    require('../../assets/img/home/flower1_1.png')
-  );
+  const [flowerImg, setFlowerImg] = useState(require("../../assets/img/home/flower1_1.png"));
+
 
   return (
     <Container>
       <MainBody>
-        <Background source={require('../../assets/img/home/home_bg_img.png')}>
+        <Background source={require("../../assets/img/home/home_bg_img.png")}>
           {/* <MsgContainer> */}
           <Image
             style={{
-              marginTop: '20%',
+              marginTop: "20%",
               paddingTop: 0,
-              width: '80%',
-              height: '25%',
-              resizeMode: 'contain',
-              alignSelf: 'center',
+              width: "80%",
+              height: "25%",
+              resizeMode: "contain",
+              alignSelf: "center",
             }}
-            source={require('../../assets/img/home/msg_box.png')}
+            source={require("../../assets/img/home/msg_box.png")}
           />
 
           {/* <StyledText>
@@ -123,30 +114,28 @@ const Question = () => {
               <Text>오늘을 같이 기억해요! </Text>
             </StyledText> */}
           {/* </MsgContainer> */}
-          {/* make touchableopacity when onpress navigate to another page */}
-
-          <TouchableOpacity onPress={() => navigation.navigate('Garden')}>
-          
-            <Image
-              style={{
-                paddingTop: 0,
-                width: '90%',
-                height: '70%',
-                resizeMode: 'contain',
-                alignSelf: 'center',
-              }}
-              //새싹이미지
-              //source={require("../../assets/img/home/flower1_1.png")}
-              //꽃 2번째이미지
-              //source={require("../../assets/img/home/flower1_2.png")}
-              //꽃 3번째이미지
-              //source={require("../../assets/img/home/flower1_3.png")}
-              //꽃 4번째이미지
-              //source={require("../../assets/img/home/flower1_4.png")}
-              //꽃 5번째 이미지
-              source={require('../../assets/img/home/flower1_5.png')}
-            />
-          </TouchableOpacity>
+          <Image
+            style={{
+              paddingTop: 0,
+              width: "90%",
+              height: "70%",
+              resizeMode: "contain",
+              alignSelf: "center",
+            }}
+            //새싹이미지
+            //source={require("../../assets/img/home/flower1_1.png")}
+            //꽃 2번째이미지
+            //source={require("../../assets/img/home/flower1_2.png")}
+            //꽃 3번째이미지
+            //source={require("../../assets/img/home/flower1_3.png")}
+            //꽃 4번째이미지
+            //source={require("../../assets/img/home/flower1_4.png")}
+            //꽃 5번째 이미지
+            // source={
+            //   require("../../assets/img/home/flower1_5.png")
+            // }
+            source={flowerImg}
+          />
         </Background>
       </MainBody>
 
@@ -155,10 +144,10 @@ const Question = () => {
           // width: "100%",
           // height: "100%",
           flex: 1,
-          flexDirection: 'row',
+          flexDirection: "row",
         }}
       >
-        <TouchableOpacity onPress={() => navigation.navigate('TodaysQuestion')}>
+        <TouchableOpacity onPress={() => navigation.navigate("TodaysQuestion")}>
           <Image
             style={{
               marginTop: 0,
@@ -166,14 +155,14 @@ const Question = () => {
               marginRight: 5,
               marginBottom: 15,
               width: 180,
-              height: '100%',
-              resizeMode: 'contain',
+              height: "100%",
+              resizeMode: "contain",
             }}
-            source={require('../../assets/img/home/todays_question_btn.png')}
+            source={require("../../assets/img/home/todays_question_btn.png")}
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Test')}>
+        <TouchableOpacity onPress={() => navigation.navigate("Test")}>
           <Image
             style={{
               marginTop: 0,
@@ -181,10 +170,11 @@ const Question = () => {
               marginRight: 5,
               marginBotton: 15,
               width: 180,
-              height: '100%',
-              resizeMode: 'contain',
+              height: "100%",
+              resizeMode: "contain",
             }}
-            source={require('../../assets/img/home/test_result_btn.png')}
+            // source={flowerImg}
+            // e다시 찾아 쓰기
           />
         </TouchableOpacity>
       </View>
@@ -193,6 +183,12 @@ const Question = () => {
 };
 
 export default Question;
+
+
+
+
+
+
 
 // import React, { useEffect } from 'react';
 // import { useState } from 'react';
