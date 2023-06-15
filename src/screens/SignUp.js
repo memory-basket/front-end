@@ -23,6 +23,7 @@ const StyledBtn = styled.Image`
   width: 370px;
   height: 60px;
   margin-bottom: 10px;
+  //background-size: cover;
 `;
 
 const SignUp = ({ navigation }) => {
@@ -38,6 +39,9 @@ const SignUp = ({ navigation }) => {
       <Container>
         <TouchableOpacity>
           <StyledBtn
+            style={{
+              resizeMode: "contain",
+            }}
             source={require("../../assets/img/auth/kakao_login_btn.png")}
           />
         </TouchableOpacity>

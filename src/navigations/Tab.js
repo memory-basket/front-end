@@ -1,7 +1,7 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { QuestionList, Home, MyPage } from '../screens';
-import { Image, TouchableOpacity, ImageBackground } from 'react-native';
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { QuestionList, Home, MyPage } from "../screens";
+import { Image, TouchableOpacity, ImageBackground } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +27,7 @@ const TabNav = () => {
               }
             />
           ),
-          tabBarActiveTintColor: '#FFB800',
+          tabBarActiveTintColor: "#FFB800",
         }}
       />
       <Tab.Screen
@@ -62,7 +62,7 @@ const TabNav = () => {
               }
             />
           ),
-          tabBarActiveTintColor: '#FF5370',
+          tabBarActiveTintColor: "#FF5370",
         }}
       />
     </Tab.Navigator>

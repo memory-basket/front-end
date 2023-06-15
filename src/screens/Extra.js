@@ -1,35 +1,27 @@
-// import { React, useContext } from "react";
-// import {
-//   TouchableOpacity,
-//   StyleSheet,
-//   Text,
-//   View,
-//   Button,
-//   Image,
-// } from "react-native";
+//전화번호 받는 페이지입니다.
 
-// export default function App() {
-//   return (
-//     <View>
-//       <Text>마이페이지</Text>
-//       <View style={styles.container}>
-//         <View>
-//           <View>
-//             <Image source={require("../../assets/img/flower11_img.png")} />
-//           </View>
-//           <Text>치매 안심 센터</Text>
-//         </View>
-//       </View>
-//     </View>
-//   );
-// }
+import React from "react";
+import styled from "styled-components/native";
 
-// const styles = StyleSheet.create({
-//   container: {
-//     marginTop: "30%",
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   text: {},
-// });
+const Container = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: ${({ theme }) => theme.background};
+  padding: 0 20px;
+`;
+
+const StyledText = styled.Text`
+  font-size: 30px;
+  color: #111111;
+`;
+
+const Number = () => {
+  return (
+    <Container>
+      <StyledText>전화번호</StyledText>
+    </Container>
+  );
+};
+
+export default Number;
