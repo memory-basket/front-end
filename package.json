@@ -20,7 +20,11 @@
     "expo": "^46.0.21",
     "expo-app-loading": "~2.1.0",
     "expo-font": "~10.2.0",
+<<<<<<< HEAD
     "expo-linking": "^4.0.1",
+=======
+    "expo-linking": "~3.2.4",
+>>>>>>> refs/remotes/origin/master
     "expo-screen-orientation": "~4.3.0",
     "expo-splash-screen": "~0.16.2",
     "expo-status-bar": "~1.4.4",
