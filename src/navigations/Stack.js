@@ -1,5 +1,5 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 import {
   Home,
   Question,
@@ -22,6 +22,8 @@ import {
   QuestionList,
   AddPage,
   Garden,
+  DementiaTest,
+  Result,
 } from '../screens';
 import TabNav from './Tab';
 const Stack = createStackNavigator();
@@ -30,7 +32,7 @@ const StackNav = () => {
   return (
     <Stack.Navigator
       initialRouteName="TabNav"
-      screenOptions={{ cardStyle: { backgroundColor: "#ffffff" } }}
+      screenOptions={{ cardStyle: { backgroundColor: '#ffffff' } }}
       options={{ headerShown: false }}
     >
       {/* <Stack.Navigator
@@ -77,7 +79,11 @@ const StackNav = () => {
         options={{ headerShown: false }}
       />
       {/* 적용하기 다른 페이지도 */}
-      <Stack.Screen name="TodaysQuestion" component={TodaysQuestion} options={{ headerStyle: { backgroundColor: '#fff2D0' } }}/>
+      <Stack.Screen
+        name="TodaysQuestion"
+        component={TodaysQuestion}
+        options={{ headerStyle: { backgroundColor: '#fff2D0' } }}
+      />
       <Stack.Screen
         name="WriteTodaysQuestion"
         component={WriteTodaysQuestion}
@@ -130,6 +136,16 @@ const StackNav = () => {
       />
       <Stack.Screen name="AddPage" component={AddPage} />
       <Stack.Screen name="Garden" component={Garden} />
+      <Stack.Screen
+        name="DementiaTest"
+        component={DementiaTest}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Result"
+        component={Result}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };

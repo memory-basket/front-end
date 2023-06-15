@@ -25,7 +25,7 @@ const Home = ({ navigation }) => {
         title="오늘의 질문"
         onPress={() => navigation.navigate("Question")}
       />
-      <Button title="치매 진단" onPress={() => navigation.navigate("Test")} />
+      <Button title="치매 진단" onPress={() => navigation.navigate("DementiaTest")} />
       <Button title="MyPage" onPress={() => navigation.navigate("MyPage")} />
       <Button title="Landing" onPress={() => navigation.navigate("Landing")} />
       <Button title="Login" onPress={() => navigation.navigate("Login")} />
