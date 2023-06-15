@@ -2,6 +2,7 @@ import React, { useState, onChangeText } from 'react';
 import { Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import TitleContainer from '../../components/TitleContainer';
+import Button from '../../components/Button';
 
 const Container = styled.View`
   flex: 1;
@@ -61,9 +62,11 @@ const WriteTodaysQuestion = ({ navigation }) => {
           placeholder="답변을 입력해주세요."
         />
         <TouchableOpacity onPress={addContent}>
-          <Text>제출</Text>
+          <Text
+            style={{fontSize: 24}}
+          >제출</Text>
         </TouchableOpacity>
-        <Text>{text}</Text>
+        {/* <Text>{text}</Text> */}
       </QuestionContainer>
     </Container>
   );
