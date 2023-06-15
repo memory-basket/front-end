@@ -21,6 +21,8 @@ import OnboardingPage8 from './onboarding/OnboardingPage8';
 import MyPage from './mypage/MyPage';
 import AddPage from './mypage/AddPage';
 import Garden from './Garden';
+import DementiaTest from './dementia/DementiaTest';
+import Result from './dementia/Result';
 export {
   List,
   Main,
@@ -47,4 +49,6 @@ export {
   QuestionList,
   AddPage,
   Garden,
+  DementiaTest,
+  Result,
 };

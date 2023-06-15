@@ -22,12 +22,12 @@ const QuestionContainer = styled.View`
 `;
 const Question = styled.Text`
   font-size: 20;
-  font-family: 'GyeonggiBatangTTF_Regular';
+  //font-family: 'GyeonggiBatangTTF_Regular';
 `;
 
 const Answer = styled.Text`
   color: #5e5e5e;
-  font-family: 'GyeonggiBatangTTF_Regular';
+  //font-family: 'GyeonggiBatangTTF_Regular';
 `;
 const MyContainer = styled.View`
   flex: 2;

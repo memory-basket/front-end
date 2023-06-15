@@ -3,14 +3,14 @@ import { TouchableOpacity, View, Text } from "react-native";
 import styled from "styled-components/native";
 
 const Container = styled.View`
-  background-color: #778bdd;
+  background-color: #EEEEEE;
   padding: 10px;
   margin: 10px;
 `;
 
 const Title = styled.Text`
   font-size: 24px;
-  color: #ffffff;
+  color: #131313;
 `;
 
 const Button = ({ title, onPress }) => {
