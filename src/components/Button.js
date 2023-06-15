@@ -3,7 +3,7 @@ import { TouchableOpacity, View, Text } from "react-native";
 import styled from "styled-components/native";
 
 const Container = styled.View`
-  background-color: #EEEEEE;
+  background-color: 'white';
   padding: 10px;
   margin: 10px;
 `;
